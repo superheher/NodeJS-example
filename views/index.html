@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>NodeJS example</title>
+</head>
+<body>
+{% block content %}
+{{title}}
+{% endblock %}
+
+{% for button in buttons %}
+<form method="get" action="/{{ button.command }}">
+	<input type="submit" value="{{ button.name }}" name="{{ button.name }}">
+</form>
+{% endfor %}
+
+{% block message %}
+{{messageOfCommand}}
+{% endblock %}
+
+</body>
+</html>
